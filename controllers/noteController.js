@@ -4,16 +4,16 @@ const path = require("path");
 
 const  { v1: uuidv1 } = require('uuid');
 
-// const readFileAsync = util.promisify(fs.readFile);
-// const writeFileAsync = util.promisify(fs.writeFile);
+const readFileAsync = util.promisify(fs.readFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
-// function read() {
-//     return readFileAsync('db/db.json', 'utf8');
-// }
+function read() {
+    return readFileAsync('db/db.json', 'utf8');
+}
 
-// function write(note) {
-//     return writeFileAsync('db/db.json', JSON.stringify(note))
-// }
+function write(note) {
+    return writeFileAsync('db/db.json', JSON.stringify(note))
+}
 // creates a new class called "store"
 // a data array will be created inside one of the functions
 // getNotes,addNotes, and deleteNotes
